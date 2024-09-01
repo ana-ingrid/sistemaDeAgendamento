@@ -6,6 +6,19 @@
 **Resumo:** 
 
 
+## Diagrama de classes
+
+--
+
+## Diagrama de caso de uso
+
+--
+
+## Endpoints disponíveis
+
+--
+
+
 ## Tecnologias utilizadas
 
 --
@@ -17,10 +30,12 @@
 --
 
 
-##  Variáveis necessárias para rodar o projeto
+##  Variáveis necessárias para rodar o projeto localmente
 
---
+ Variável      | Valor                               | Observação                                                              |
+|---------------|-------------------------------------|-------------------------------------------------------------------------|
+| `DB_JDBC_URL` | jdbc:mysql://localhost/agendamentos | Necessário criar o schema 'agendamentos' no banco de dados MySQL        |
+| `DB_USUARIO`  | ?                                   | Preencher com o nome do seu usuário root ou outro que esteja utilizando |
+| `DB_PASSWORD` | ?                                   | Preencher com a senha do seu usuário                                    |
 
-## Diagrama de classes
 
---

@@ -8,11 +8,11 @@
 
 ## Diagrama de classes
 
---
+![Diagrama de classes](diagramaClasses.png)
 
 ## Diagrama de caso de uso
 
---
+![Diagrama de caso de uso](diagramaCasoDeUso.png)
 
 ## Endpoints disponíveis
 

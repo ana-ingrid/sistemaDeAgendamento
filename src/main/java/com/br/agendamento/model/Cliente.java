@@ -12,7 +12,6 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@EqualsAndHashCode(of = "id")
 public class Cliente {
 
     @Id
@@ -26,9 +25,6 @@ public class Cliente {
     private String email_cliente;
     private Date data_nascimento;
     private String codigo_pessoa;
-
-
-
 
 
 }

@@ -7,24 +7,14 @@ import java.util.Date;
 import java.util.List;
 
 @Entity
-@Table(name = "clientes")
+@DiscriminatorValue("CLIENTE")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Cliente {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id_cliente;
+public class Cliente extends Usuario {
 
     @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
     private List<Agendamento> agendamentos;
-
-    private String nome_cliente;
-    private String email_cliente;
-    private Date data_nascimento;
-    private String codigo_pessoa;
-
 
 }

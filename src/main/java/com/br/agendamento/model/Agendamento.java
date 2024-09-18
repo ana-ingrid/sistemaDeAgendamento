@@ -32,8 +32,13 @@ public class Agendamento {
     @JoinColumn(name = "servico_id")
     private Servico servico;
 
-    private Date data_escolhida;
-    private Timestamp hora_escolhida;
-    private Date horario_agendamento;
+    @Column(name = "data_escolhida")
+    private Date dataEscolhida;
+
+    @Column(name = "hora_escolhida")
+    private Timestamp horaEscolhida;
+
+    @Column(name = "horario_agendamento")
+    private Date horarioAgendamento;
 
 }

@@ -11,10 +11,15 @@ public abstract class Usuario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id_usuario;
+    @Column(name = "usuario_id")
+    private Integer usuarioId;
 
     private String nome;
     private String email;
-    private Date data_nascimento;
-    private String codigo_pessoa;
+
+    @Column(name = "data_nascimento")
+    private Date dataNascimento;
+
+    @Column(name = "codigo_pessoa", unique = true)
+    private String codigoPessoa;
 }

@@ -17,7 +17,8 @@ public class Servico {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private  Integer id_servico;
+    @Column(name = "id_servico")
+    private  Integer servicoId;
 
     @ManyToMany
     @JoinTable(name = "profissional_servico",
@@ -25,7 +26,9 @@ public class Servico {
     inverseJoinColumns = @JoinColumn(name = "profissional_id"))
     List<Profissional> profissionais;
 
-    private String nome_servico;
+    @Column(name = "nome_servico")
+    private String nomeServico;
+
     private String descricao;
     private double valor;
 

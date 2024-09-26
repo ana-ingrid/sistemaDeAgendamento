@@ -3,15 +3,14 @@ package com.br.agendamento.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.sql.Timestamp;
 import java.util.Date;
 
 @Entity
-@Table(name = "Agendamentos")
 @Setter
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-@EqualsAndHashCode(of = "id")
 public class Agendamento {
 
     @Id
@@ -19,11 +18,27 @@ public class Agendamento {
     private Integer id_agendamento;
 
     @ManyToOne
-    @JoinColumn(name = "id_cliente")
+    @JoinColumn(name = "cliente_id")
     private Cliente cliente;
-    private String data_escolhida;
-    private String hora_escolhida;
-    private Date horario_agendamento;
 
+    @ManyToOne
+    @JoinColumn(name = "profissional_id")
+    private Profissional profissional;
+
+    @OneToOne(mappedBy = "agendamento", cascade = CascadeType.ALL, optional = false, orphanRemoval = true)
+    private Pagamento pagamento;
+
+    @ManyToOne
+    @JoinColumn(name = "servico_id")
+    private Servico servico;
+
+    @Column(name = "data_escolhida")
+    private Date dataEscolhida;
+
+    @Column(name = "hora_escolhida")
+    private Timestamp horaEscolhida;
+
+    @Column(name = "horario_agendamento")
+    private Date horarioAgendamento;
 
 }

@@ -1,12 +1,16 @@
 package com.br.agendamento.model;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 @Entity
 @DiscriminatorColumn(name = "tipo_usuario", discriminatorType = DiscriminatorType.STRING)
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@Getter
+@Setter
 public abstract class Usuario {
 
     @Id
@@ -18,7 +22,7 @@ public abstract class Usuario {
     private String email;
 
     @Column(name = "data_nascimento")
-    private Date dataNascimento;
+    private LocalDate dataNascimento;
 
     @Column(name = "codigo_pessoa", unique = true)
     private String codigoPessoa;

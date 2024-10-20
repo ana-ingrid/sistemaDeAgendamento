@@ -3,14 +3,17 @@ package com.br.agendamento.service;
 
 import com.br.agendamento.repository.UsuarioRepository;
 import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
+import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 @Service
 @AllArgsConstructor
-@NoArgsConstructor
 public class ClienteService {
+
+
+    public ModelMapper modelMapper;
 
     private UsuarioRepository usuarioRepository;
 
 }
+
